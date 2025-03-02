@@ -1,0 +1,165 @@
+/* -------------------------
+   GENERAL RESET & UTILITIES
+------------------------- */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Visually hidden but focusable (for skip links) */
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* -------------------------
+   DEFAULT FONTS
+   (You can adjust or add more)
+------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Example of the OpenDyslexic font (self-host or from a CDN):
+   https://github.com/antijingoist/open-dyslexic
+   For demonstration, let's assume it's available via @import:
+*/
+/* @import url('https://cdn.example.com/fonts/OpenDyslexic.css'); */
+
+/* We will define 3 custom font families for toggling:
+   1) Style 1: 'Roboto', sans-serif (default)
+   2) Style 2: 'Arial', sans-serif
+   3) Style 3: 'OpenDyslexic', sans-serif
+*/
+:root {
+  --font-style-1: 'Roboto', sans-serif;
+  --font-style-2: 'Arial', sans-serif;
+  /* Replace with the actual name if you host OpenDyslexic:
+     e.g., 'OpenDyslexic-Regular', sans-serif
+  */
+  --font-style-3: 'OpenDyslexic', sans-serif;
+
+  /* Font sizes */
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+}
+
+/* Base font-size and style (default to style1, medium) */
+body.font-small {
+  font-family: var(--font-style-1);
+  font-size: var(--font-size-small);
+}
+
+body.font-medium {
+  font-family: var(--font-style-1);
+  font-size: var(--font-size-medium);
+}
+
+body.font-large {
+  font-family: var(--font-style-1);
+  font-size: var(--font-size-large);
+}
+
+/* Additional classes to override font family */
+body.font-style-1 {
+  font-family: var(--font-style-1) !important;
+}
+
+body.font-style-2 {
+  font-family: var(--font-style-2) !important;
+}
+
+body.font-style-3 {
+  font-family: var(--font-style-3) !important;
+}
+
+/* -------------------------
+   DARK MODE
+------------------------- */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .bg-light {
+  background-color: #1f1f1f !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .navbar .nav-link,
+body.dark-mode .navbar-brand {
+  color: #ffffff !important;
+}
+
+body.dark-mode .btn-primary {
+  background-color: #bb86fc !important;
+  border-color: #bb86fc !important;
+}
+
+body.dark-mode .btn-outline-secondary {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+body.dark-mode footer {
+  background-color: #1f1f1f;
+}
+
+/* -------------------------
+   HIGH CONTRAST MODE
+------------------------- */
+body.high-contrast {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.high-contrast .navbar,
+body.high-contrast .bg-light {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast .navbar .nav-link,
+body.high-contrast .navbar-brand {
+  color: #ffffff !important;
+}
+
+body.high-contrast .btn-primary {
+  background-color: #ffeb3b !important;
+  color: #000 !important;
+  border-color: #ffeb3b !important;
+}
+
+body.high-contrast .btn-outline-secondary {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+body.high-contrast footer {
+  background-color: #000000;
+}
+
+/* -------------------------
+   ACCESSIBILITY PANEL
+------------------------- */
+.accessibility-panel {
+  position: fixed;
+  top: 20%;
+  right: 1rem;
+  width: 200px;
+  z-index: 9999;
+  border-radius: 0.25rem;
+}
+
+.accessibility-panel h5 {
+  margin-bottom: 0.5rem;
+}
+
+/* Adjust spacing on toggles */
+.accessibility-panel .btn {
+  margin-bottom: 0.25rem;
+}
