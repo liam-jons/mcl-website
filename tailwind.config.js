@@ -40,5 +40,9 @@ module.exports = {
       },
     },
   },
+  // Improved performance for development
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   plugins: [],
 }
