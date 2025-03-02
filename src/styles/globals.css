@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply transition-colors duration-200 bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
+  }
+  
+  section {
+    @apply py-16 md:py-24;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  p {
+    @apply my-4;
+  }
+  
+  a {
+    @apply text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300;
+  }
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --bg-color: black;
+  --text-color: white;
+  --link-color: yellow;
+  
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.high-contrast a {
+  color: var(--link-color) !important;
+}
+
+.high-contrast button {
+  border: 2px solid white !important;
+}
+
+/* Font Size Adjustments */
+html {
+  font-size: 100%; /* Base size that will be adjusted by JavaScript */
+}
+
+/* Focus outlines for accessibility */
+*:focus-visible {
+  @apply outline-2 outline-offset-2 outline-primary-500;
+}
