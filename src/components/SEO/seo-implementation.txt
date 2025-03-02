@@ -1,0 +1,171 @@
+# SEO Implementation for MCL Website
+
+To enhance the website's search engine visibility, I've implemented the following SEO optimizations:
+
+## 1. Updated `_document.jsx` with Meta Tags
+
+```jsx
+// src/pages/_document.jsx
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          <meta charSet="utf-8" />
+          <meta name="description" content="Mason Consulting Limited - IT services with at least 50% neurodivergent technical staff. Providing consulting, development, AI, and support services." />
+          <meta name="keywords" content="IT services, neurodiversity, consulting, software development, AI readiness, IT security, not-for-profit" />
+          <meta name="author" content="Mason Consulting Limited" />
+          
+          {/* Open Graph / Social Media */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://masonconsulting.co.uk" />
+          <meta property="og:title" content="Mason Consulting Limited - IT Services with a Neurodiversity Focus" />
+          <meta property="og:description" content="A not-for-profit IT consultancy with a commitment that at least 50% of our technical staff are neurodivergent." />
+          <meta property="og:image" content="https://masonconsulting.co.uk/images/mcl-social-preview.jpg" />
+          
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Mason Consulting Limited - IT Services with a Neurodiversity Focus" />
+          <meta name="twitter:description" content="A not-for-profit IT consultancy with a commitment that at least 50% of our technical staff are neurodivergent." />
+          <meta name="twitter:image" content="https://masonconsulting.co.uk/images/mcl-social-preview.jpg" />
+          
+          {/* Favicon */}
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link rel="manifest" href="/site.webmanifest" />
+          
+          {/* Canonical URL */}
+          <link rel="canonical" href="https://masonconsulting.co.uk" />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+
+export default MyDocument;
+```
+
+## 2. Dynamic Title and Meta Tags for Each Page
+
+```jsx
+// src/pages/index.jsx
+import Head from 'next/head';
+
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>Mason Consulting Limited - IT Services with a Neurodiversity Focus</title>
+        <meta name="description" content="Mason Consulting Limited delivers exceptional IT services with a commitment that at least 50% of our technical staff are neurodivergent." />
+      </Head>
+      {/* Rest of the page */}
+    </>
+  );
+}
+```
+
+## 3. Structured Data (JSON-LD) for Organization
+
+Create a new file `src/components/SEO/StructuredData.jsx`:
+
+```jsx
+import React from 'react';
+
+const StructuredData = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Mason Consulting Limited",
+    "url": "https://masonconsulting.co.uk",
+    "logo": "https://masonconsulting.co.uk/images/mcl-logo.svg",
+    "description": "A not-for-profit IT consultancy with a commitment that at least 50% of our technical staff are neurodivergent.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "UK"
+    },
+    "sameAs": [
+      "https://propelpeople.co.uk"
+    ]
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  );
+};
+
+export default StructuredData;
+```
+
+Add this to the `_document.jsx` file inside the `<Head>` tag:
+
+```jsx
+<Head>
+  {/* Other head elements */}
+  <StructuredData />
+</Head>
+```
+
+## 4. Sitemap Configuration
+
+Create `public/sitemap.xml`:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://masonconsulting.co.uk/</loc>
+    <lastmod>2023-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+```
+
+## 5. robots.txt Configuration
+
+Create `public/robots.txt`:
+
+```
+User-agent: *
+Allow: /
+
+Sitemap: https://masonconsulting.co.uk/sitemap.xml
+```
+
+## 6. Semantic HTML Improvements
+
+The site already uses semantic HTML elements (`<section>`, `<header>`, `<footer>`, etc.), which is good for SEO. Each section has appropriate heading hierarchy, starting with `<h1>` and then using `<h2>`, `<h3>`, etc.
+
+## 7. Image Optimization Suggestions
+
+For all images:
+- Use descriptive filenames
+- Add appropriate alt text
+- Consider implementing responsive images with `next/image` component
+- Optimize image file sizes for web
+
+## 8. Performance Optimization
+
+- Ensure the site loads quickly (affects SEO rankings)
+- Implement code splitting with Next.js to reduce initial load time
+- Use responsive images
+- Implement lazy loading for offscreen content
+
+## Implementation Notes
+
+These SEO features should be regularly updated as the website content changes. Make sure to:
+- Update meta descriptions when content changes
+- Review and update structured data periodically
+- Add new pages to the sitemap when created
+- Monitor performance using tools like Google PageSpeed Insights
