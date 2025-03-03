@@ -22,7 +22,7 @@ const Neurodiversity = () => {
       ),
     },
     {
-      title: 'Specialized Focus',
+      title: 'Specialised Focus',
       description: 'The ability to deeply focus on specific interests can result in exceptional expertise and dedication to technical fields.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -144,12 +144,12 @@ const Neurodiversity = () => {
                 <p className="text-gray-600 dark:text-gray-300">Neurodivergent technical staff</p>
               </div>
               <div className="p-8 text-center">
-                <div className="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">40+ yrs</div>
-                <p className="text-gray-600 dark:text-gray-300">Combined experience in neurodiversity</p>
+                <div className="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">4</div>
+                <p className="text-gray-600 dark:text-gray-300">Centres for Excellence</p>
               </div>
               <div className="p-8 text-center">
                 <div className="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">100%</div>
-                <p className="text-gray-600 dark:text-gray-300">Not-for-profit organization</p>
+                <p className="text-gray-600 dark:text-gray-300">Not-for-profit organisation</p>
               </div>
             </div>
           </div>
