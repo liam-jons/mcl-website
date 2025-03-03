@@ -6,7 +6,7 @@ export const useAccessibility = () => useContext(AccessibilityContext);
 
 export const AccessibilityProvider = ({ children }) => {
   const [fontSize, setFontSize] = useState(100); // percentage
-  const [fontFamily, setFontFamily] = useState('Inter'); // default font
+  const [fontFamily, setFontFamily] = useState('Propel'); // default style
   const [highContrast, setHighContrast] = useState(false);
   
   // Font size adjustments
@@ -17,7 +17,7 @@ export const AccessibilityProvider = ({ children }) => {
   // Toggle high contrast
   const toggleHighContrast = () => setHighContrast(prev => !prev);
   
-  // Change font family - options: 'Inter', 'Roboto', 'OpenDyslexic'
+  // Change font family - options: 'Propel', 'Inter', 'OpenDyslexic'
   const changeFontFamily = (font) => setFontFamily(font);
   
   // Apply font size to document
@@ -25,13 +25,27 @@ export const AccessibilityProvider = ({ children }) => {
     document.documentElement.style.fontSize = `${fontSize}%`;
   }, [fontSize]);
   
-  // Apply font family to document
+  // Apply font style to document
   useEffect(() => {
-    document.body.style.fontFamily = fontFamily === 'OpenDyslexic' 
-      ? 'OpenDyslexic, sans-serif' 
-      : fontFamily === 'Roboto' 
-        ? 'Roboto, sans-serif' 
-        : 'Inter, sans-serif';
+    if (fontFamily === 'OpenDyslexic') {
+      // OpenDyslexic for all text
+      document.body.style.fontFamily = 'OpenDyslexic, sans-serif';
+      document.documentElement.classList.remove('font-style-inter');
+      document.documentElement.classList.remove('font-style-propel');
+      document.documentElement.classList.add('font-style-opendyslexic');
+    } else if (fontFamily === 'Inter') {
+      // Inter for all text
+      document.body.style.fontFamily = 'Inter, sans-serif';
+      document.documentElement.classList.remove('font-style-propel');
+      document.documentElement.classList.remove('font-style-opendyslexic');
+      document.documentElement.classList.add('font-style-inter');
+    } else {
+      // Propel branding (default)
+      document.body.style.fontFamily = 'Kohinoor Bangla, sans-serif';
+      document.documentElement.classList.remove('font-style-inter');
+      document.documentElement.classList.remove('font-style-opendyslexic');
+      document.documentElement.classList.add('font-style-propel');
+    }
   }, [fontFamily]);
   
   // Apply high contrast mode

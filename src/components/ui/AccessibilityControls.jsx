@@ -69,31 +69,31 @@ const AccessibilityControls = ({ onClose }) => {
         </div>
         
         <div>
-          <h4 className="font-medium mb-2">Font</h4>
+          <h4 className="font-medium mb-2">Style</h4>
           <div className="flex flex-col space-y-2">
             {/* First row - 2 buttons */}
             <div className="grid grid-cols-2 gap-2">
               <button 
-                onClick={() => changeFontFamily('Kohinoor Bangla')}
+                onClick={() => changeFontFamily('Propel')}
                 className={`p-2 rounded-md text-sm ${
-                  fontFamily === 'Kohinoor Bangla' 
+                  fontFamily === 'Propel' 
                     ? 'bg-primary-600 text-white' 
                     : 'bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
                 }`}
               >
-                Kohinoor Bangla
+                Propel
               </button>
               
               <button 
-                onClick={() => changeFontFamily('Library 3am Soft')}
+                onClick={() => changeFontFamily('Inter')}
                 className={`p-2 rounded-md text-sm ${
-                  fontFamily === 'Library 3am Soft' 
+                  fontFamily === 'Inter' 
                     ? 'bg-primary-600 text-white' 
                     : 'bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
                 }`}
-                style={{ fontFamily: 'Library 3am Soft, Georgia, serif' }}
+                style={{ fontFamily: 'Inter, sans-serif' }}
               >
-                Library 3am
+                Inter
               </button>
             </div>
             
