@@ -2,16 +2,6 @@ import React from 'react';
 import ContactForm from '../ui/ContactForm';
 
 const Contact = () => {
-  const clients = [
-    { name: 'TPT', location: 'Leeds' },
-    { name: 'Morgan Stanley', location: 'Glasgow' },
-    { name: 'Revature', location: 'US' },
-    { name: 'InvestCloud', location: 'Asset Management' },
-    { name: 'Marks & Spencer', location: 'Propel Services' },
-    { name: 'Royal Mail', location: 'Propel Services' },
-    { name: 'Heathrow', location: 'Propel Services' },
-  ];
-
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,7 +9,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <div className="max-w-md">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                <h2 className="text-3xl md:text-4xl font-headline text-gray-900 dark:text-white mb-6">
                   Get in Touch
                 </h2>
                 
@@ -34,35 +24,8 @@ const Contact = () => {
             </div>
             
             <div className="lg:pl-12">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-                Our Clients & Partners
-              </h3>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
-                {clients.map((client, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm flex items-center"
-                  >
-                    <div className="w-10 h-10 bg-gray-200 dark:bg-gray-600 rounded-full flex items-center justify-center mr-4">
-                      <span className="font-bold text-gray-500 dark:text-gray-300">
-                        {client.name.charAt(0)}
-                      </span>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900 dark:text-white">
-                        {client.name}
-                      </h4>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
-                        {client.location}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
               <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm">
-                <h3 className="font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="font-headline text-2xl text-gray-900 dark:text-white mb-4">
                   Why Choose MCL?
                 </h3>
                 

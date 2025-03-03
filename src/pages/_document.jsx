@@ -8,7 +8,22 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta name="description" content="Mason Consulting Limited - IT services with a neurodiversity focus" />
           <link rel="icon" href="/favicon.ico" />
-          {/* You can add additional meta tags, web fonts, or analytics here */}
+          
+          {/* Preload font files for faster loading */}
+          <link
+            rel="preload"
+            href="/fonts/Korolev-Font/KorolevCondensed-Heavy.otf"
+            as="font"
+            type="font/otf"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/library_3_am/Library3amSoft-Regular.otf"
+            as="font"
+            type="font/otf"
+            crossOrigin="anonymous"
+          />
         </Head>
         <body>
           <Main />

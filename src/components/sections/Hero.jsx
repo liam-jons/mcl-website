@@ -6,7 +6,7 @@ const Hero = () => {
     <section id="hero" className="relative min-h-screen flex items-center">
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/10 to-secondary-600/10 dark:from-primary-600/20 dark:to-secondary-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/10 to-midnight-600/10 dark:from-primary-600/20 dark:to-midnight-600/20"></div>
         <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-5 dark:opacity-10"></div>
       </div>
       
@@ -17,7 +17,7 @@ const Hero = () => {
             Where technology meets neurodiversity
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline text-gray-900 dark:text-white mb-6">
             IT Services with a 
             <span className="text-primary-600 dark:text-primary-400"> Neurodiversity </span> 
             Focus

@@ -70,35 +70,39 @@ const AccessibilityControls = ({ onClose }) => {
         
         <div>
           <h4 className="font-medium mb-2">Font</h4>
-          <div className="grid grid-cols-3 gap-2">
-            <button 
-              onClick={() => changeFontFamily('Inter')}
-              className={`p-2 rounded-md text-sm ${
-                fontFamily === 'Inter' 
-                  ? 'bg-primary-500 text-white' 
-                  : 'bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
-              }`}
-            >
-              Inter
-            </button>
+          <div className="flex flex-col space-y-2">
+            {/* First row - 2 buttons */}
+            <div className="grid grid-cols-2 gap-2">
+              <button 
+                onClick={() => changeFontFamily('Kohinoor Bangla')}
+                className={`p-2 rounded-md text-sm ${
+                  fontFamily === 'Kohinoor Bangla' 
+                    ? 'bg-primary-600 text-white' 
+                    : 'bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
+                }`}
+              >
+                Kohinoor Bangla
+              </button>
+              
+              <button 
+                onClick={() => changeFontFamily('Library 3am Soft')}
+                className={`p-2 rounded-md text-sm ${
+                  fontFamily === 'Library 3am Soft' 
+                    ? 'bg-primary-600 text-white' 
+                    : 'bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
+                }`}
+                style={{ fontFamily: 'Library 3am Soft, Georgia, serif' }}
+              >
+                Library 3am
+              </button>
+            </div>
             
-            <button 
-              onClick={() => changeFontFamily('Roboto')}
-              className={`p-2 rounded-md text-sm ${
-                fontFamily === 'Roboto' 
-                  ? 'bg-primary-500 text-white' 
-                  : 'bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
-              }`}
-              style={{ fontFamily: 'Roboto, sans-serif' }}
-            >
-              Roboto
-            </button>
-            
+            {/* Second row - 1 button (full width) */}
             <button 
               onClick={() => changeFontFamily('OpenDyslexic')}
               className={`p-2 rounded-md text-sm ${
                 fontFamily === 'OpenDyslexic' 
-                  ? 'bg-primary-500 text-white' 
+                  ? 'bg-primary-600 text-white' 
                   : 'bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
               }`}
               style={{ fontFamily: 'OpenDyslexic, sans-serif' }}
@@ -114,7 +118,7 @@ const AccessibilityControls = ({ onClose }) => {
             onClick={toggleHighContrast}
             className={`w-full p-2 rounded-md text-sm ${
               highContrast
-                ? 'bg-primary-500 text-white'
+                ? 'bg-primary-600 text-white'
                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
             }`}
           >

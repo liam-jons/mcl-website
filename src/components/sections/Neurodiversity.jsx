@@ -22,7 +22,7 @@ const Neurodiversity = () => {
       ),
     },
     {
-      title: 'Specialised Focus',
+      title: 'Specialized Focus',
       description: 'The ability to deeply focus on specific interests can result in exceptional expertise and dedication to technical fields.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -51,7 +51,7 @@ const Neurodiversity = () => {
                 Our Unique Approach
               </div>
               
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-headline text-gray-900 dark:text-white mb-6">
                 Neurodiversity at the Heart of What We Do
               </h2>
               
@@ -140,16 +140,16 @@ const Neurodiversity = () => {
           <div className="mt-20 bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 dark:divide-gray-700">
               <div className="p-8 text-center">
-                <div className="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">50%+</div>
+                <div className="text-4xl font-headline text-primary-600 dark:text-primary-400 mb-2">50%+</div>
                 <p className="text-gray-600 dark:text-gray-300">Neurodivergent technical staff</p>
               </div>
               <div className="p-8 text-center">
-                <div className="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">4</div>
+                <div className="text-4xl font-headline text-primary-600 dark:text-primary-400 mb-2">3</div>
                 <p className="text-gray-600 dark:text-gray-300">Centres for Excellence</p>
               </div>
               <div className="p-8 text-center">
-                <div className="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">100%</div>
-                <p className="text-gray-600 dark:text-gray-300">Not-for-profit organisation</p>
+                <div className="text-4xl font-headline text-primary-600 dark:text-primary-400 mb-2">100%</div>
+                <p className="text-gray-600 dark:text-gray-300">Not-for-profit organization</p>
               </div>
             </div>
           </div>
