@@ -1,5 +1,5 @@
-// /api/contact.js
-const nodemailer = require('nodemailer');
+// src/pages/api/contact.js
+import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
   // Only allow POST requests
@@ -33,11 +33,11 @@ export default async function handler(req, res) {
       });
     }
 
-    // Create email transporter (configure with your SMTP settings)
+    // Create email transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: parseInt(process.env.SMTP_PORT),
-      secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
+      secure: process.env.SMTP_SECURE === 'true',
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASSWORD,
