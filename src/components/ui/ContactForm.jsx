@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Button from './Button';
 
 const ContactForm = () => {
-  // Define state first before any other code
   const [formData, setFormData] = useState({
     email: '',
     interests: [],
@@ -52,17 +51,26 @@ const ContactForm = () => {
       return;
     }
     
+    setFormStatus({
+      submitted: true,
+      success: false,
+      error: 'Sending your message...'
+    });
+    
     try {
-      // In a real implementation, this would be a fetch to your API endpoint
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData),
-      // });
+      // Send the form data to your Vercel serverless function
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
       
-      // if (!response.ok) throw new Error('Failed to submit form');
+      const data = await response.json();
       
-      // For demo purposes, we'll simulate a successful submission
+      if (!response.ok) {
+        throw new Error(data.message || 'Failed to submit form');
+      }
+      
       setFormStatus({
         submitted: true,
         success: true,
