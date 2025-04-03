@@ -56,8 +56,7 @@ const Neurodiversity = () => {
               </h2>
               
               <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg">
-                Neuroinclusion is at the heart of MCL. We're committed to maintaining a workforce where at least 50% of our technical staff, including our senior leadership team, are neurodivergent.
-              </p>
+                Neuroinclusion is at the heart of MCL. We're committed to providing a workplace where people can thrive.
               
               <div className="mb-8">
                 <p className="text-gray-600 dark:text-gray-300">
@@ -141,7 +140,7 @@ const Neurodiversity = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 dark:divide-gray-700">
               <div className="p-8 text-center">
                 <div className="text-4xl font-headline text-primary-600 dark:text-primary-400 mb-2">50%+</div>
-                <p className="text-gray-600 dark:text-gray-300">Neurodivergent technical staff</p>
+                <p className="text-gray-600 dark:text-gray-300">Neurodivergent staff</p>
               </div>
               <div className="p-8 text-center">
                 <div className="text-4xl font-headline text-primary-600 dark:text-primary-400 mb-2">3</div>

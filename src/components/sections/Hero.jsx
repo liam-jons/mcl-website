@@ -14,17 +14,17 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 pt-32 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block px-3 py-1 rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm font-medium mb-6">
-            Where technology meets neurodiversity
+          Using the latest technology and AI to solve new and legacy business problems
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline text-gray-900 dark:text-white mb-6">
-            IT Services with a 
-            <span className="text-primary-600 dark:text-primary-400"> Neurodiversity </span> 
-            Focus
+            IT Services with an 
+            <span className="text-primary-600 dark:text-primary-400"> experienced understanding </span> 
+            of the business problems to deliver strong IT capabilities
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl">
-            Mason Consulting Limited delivers exceptional IT services with a commitment that at least 50% of our technical staff are neurodivergent.
+          Mason Consulting delivers exceptional IT services, with the best people and competitive pricing. We have a deep understanding of the business problem and it’s associated complexities, and use IT experience and the latest tech to deploy IT solutions which enhance the business process and solve the business problem. 
           </p>
           
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
