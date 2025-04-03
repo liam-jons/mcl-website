@@ -139,16 +139,16 @@ const Neurodiversity = () => {
           <div className="mt-20 bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 dark:divide-gray-700">
               <div className="p-8 text-center">
-                <div className="text-4xl font-headline text-primary-600 dark:text-primary-400 mb-2">50%+</div>
-                <p className="text-gray-600 dark:text-gray-300">Neurodivergent staff</p>
+                <div className="text-4xl font-headline text-primary-600 dark:text-primary-400 mb-2">100%</div>
+                <p className="text-gray-600 dark:text-gray-300">Not-for-profit organisation</p>
               </div>
               <div className="p-8 text-center">
                 <div className="text-4xl font-headline text-primary-600 dark:text-primary-400 mb-2">3</div>
-                <p className="text-gray-600 dark:text-gray-300">Centres for Excellence</p>
+                <p className="text-gray-600 dark:text-gray-300">Centres for Excellence (MCL, Propel, The Mason Foundation)</p>
               </div>
               <div className="p-8 text-center">
-                <div className="text-4xl font-headline text-primary-600 dark:text-primary-400 mb-2">100%</div>
-                <p className="text-gray-600 dark:text-gray-300">Not-for-profit organisation</p>
+                <div className="text-4xl font-headline text-primary-600 dark:text-primary-400 mb-2">50%+</div>
+                <p className="text-gray-600 dark:text-gray-300">Neurodivergent staff</p>
               </div>
             </div>
           </div>
