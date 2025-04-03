@@ -57,7 +57,7 @@ const Neurodiversity = () => {
               
               <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg">
                 Neuroinclusion is at the heart of MCL. We're committed to providing a workplace where people can thrive.
-              
+              </p>
               <div className="mb-8">
                 <p className="text-gray-600 dark:text-gray-300">
                   Propel began in 2017 supporting teachers and support staff to prepare neurodivergent young people with the transition to working life. Our USP is evidence-based content, which has been created with NATSPEC college specialist and students.
