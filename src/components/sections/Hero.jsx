@@ -20,11 +20,11 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline text-gray-900 dark:text-white mb-6">
             IT Services with an 
             <span className="text-primary-600 dark:text-primary-400"> experienced understanding </span> 
-            of the business problems to deliver strong IT capabilities
+            of the business problem to deliver strong IT capabilities
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl">
-          Mason Consulting delivers exceptional IT services, with the best people and competitive pricing. We have a deep understanding of the business problem and it’s associated complexities, and use IT experience and the latest tech to deploy IT solutions which enhance the business process and solve the business problem. 
+          Mason Consulting delivers exceptional IT services, with the best people and competitive pricing. We have a deep understanding of the business problem and its associated complexities, and use IT experience and the latest tech to deploy IT solutions which enhance the business process and solve the business problem. 
           </p>
           
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">

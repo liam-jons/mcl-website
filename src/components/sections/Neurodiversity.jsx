@@ -148,7 +148,7 @@ const Neurodiversity = () => {
               </div>
               <div className="p-8 text-center">
                 <div className="text-4xl font-headline text-primary-600 dark:text-primary-400 mb-2">50%+</div>
-                <p className="text-gray-600 dark:text-gray-300">Of our technical staff are neurodifferent, although you would never know it (because they have grown up with it))</p>
+                <p className="text-gray-600 dark:text-gray-300">Of our technical staff are neurodifferent, although you would never know it (because they have grown up with it)</p>
               </div>
             </div>
           </div>

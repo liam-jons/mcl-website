@@ -27,7 +27,7 @@ const About = () => {
             </p>
             
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              Our senior leadership team is made exclusively of technologists, who understand IT and delivery of IT inside out. Before founding MCL et al, Stephen Mason worked for many years in American (e.g. Salomon Brothers), UK and European (e.g. ABN AMRO) investment banks as a project and programme manager, delivering complex IT programmes of work. Our Non-Executive Director, Jonathan Young has been a technologist his entire career, also working many years for investment banks and also in manufacturing, life sciences, and RTD."
+              Our senior leadership team is made exclusively of technologists, who understand IT and delivery of IT inside out. Before founding MCL et al, Stephen Mason worked for many years in American (e.g. Salomon Brothers), UK and European (e.g. ABN AMRO) investment banks as a project and programme manager, delivering complex IT programmes of work. Our CEO, Jonathan Young has been a technologist his entire career, also working many years for investment banks and also in manufacturing, life sciences, and RTD."
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
